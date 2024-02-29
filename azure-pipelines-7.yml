@@ -16,13 +16,10 @@ steps:
     JAVA_HOME: $(JAVA_HOME_8_X64)
     PATH: $(JAVA_HOME_8_X64)/bin:$(PATH)
 
-- task: Maven@3
+- task: FortifySCA@7
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: 'default'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    licenseFile: 'C:\fortify.license'
+    runBuildTranslate: false
+    buildToolOptions: 'mvn -f "C:\Users\Administrator\Desktop\Fortify\DataTouch-BE\pom.xml" com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
+    fortifyBuildId: 'ahmet'
+    fortifyScanType: 'LocalScan'

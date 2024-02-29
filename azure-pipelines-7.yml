@@ -21,7 +21,8 @@ steps:
   inputs:
     licenseFile: 'C:\fortify.license'
     runBuildTranslate: false
-    buildToolOptions: 'mvn'
-    fortifySourceTranslate: 'C:\Users\Administrator\Desktop\Fortify\DataTouch-BE\pom.xml'
+    buildToolOptions: '-source 1.8 mvn -f "C:\Users\Administrator\Desktop\Fortify\DataTouch-BE\pom.xml" com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
     fortifyBuildId: 'ahmet'
+    scaVerbose: true
+    scaDebug: true
     fortifyScanType: 'LocalScan'

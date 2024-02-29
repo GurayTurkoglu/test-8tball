@@ -21,7 +21,7 @@ steps:
   inputs:
     licenseFile: 'C:\fortify.license'
     applicationType: 'other'
-    buildAnalyzerParams: 'mvn'
+    buildAnalyzerParams: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
     fortifySourceTranslate: 'pom.xml'
     fortifyBuildId: 'ahmet2'
     scaVerbose: true

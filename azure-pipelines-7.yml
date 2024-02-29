@@ -22,7 +22,7 @@ steps:
     licenseFile: 'C:\fortify.license'
     applicationType: 'other'
     buildAnalyzerParams: 'mvn'
-    fortifySourceTranslate: 'C:\Users\Administrator\Desktop\Fortify\DataTouch-BE\pom.xml'
+    fortifySourceTranslate: 'pom.xml'
     fortifyBuildId: 'ahmet2'
     scaVerbose: true
     scaDebug: true

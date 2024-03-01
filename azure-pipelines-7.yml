@@ -20,7 +20,7 @@ steps:
   inputs:
     licenseFile: 'C:\fortify.license'
     applicationType: 'other'
-    buildAnalyzerParams: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
+    buildAnalyzerParams: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate -f'
     fortifyBuildId: 'ahmet33'
     fortifyScanType: 'LocalScan'
     runFortifyUpload: true

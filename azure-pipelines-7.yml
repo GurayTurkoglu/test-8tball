@@ -15,6 +15,7 @@ steps:
   env:
     JAVA_HOME: $(JAVA_HOME_8_X64)
     PATH: $(JAVA_HOME_8_X64)/bin:$(PATH)
+
 - task: FortifySCA@7
   inputs:
     licenseFile: 'C:\fortify.license'

@@ -16,10 +16,7 @@ steps:
   inputs:
     applicationType: 'other'
     buildAnalyzerParams: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate -f'
-    fortifyBuildId: 'ytest'
-    runFortifyRulepackUpdate: true
-    scaVerbose: true
-    scaDebug: true
+    fortifyBuildId: 'ahmet33'
     fortifyScanType: 'LocalScan'
     runFortifyUpload: true
     fortifyServerName: 'fortifyssc'

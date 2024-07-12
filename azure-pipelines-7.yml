@@ -12,6 +12,11 @@ steps:
 
 - script: |
     java -version
+
+- task: CmdLine@2
+  inputs:
+    script: 'env'
+  
 - task: FortifySCA@7
   inputs:
     applicationType: 'other'

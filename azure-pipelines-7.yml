@@ -12,18 +12,16 @@ steps:
 
 - script: |
     java -version
-  env:
-    JAVA_HOME: $(JAVA_HOME_8_X64)
-    PATH: $(JAVA_HOME_8_X64)/bin:$(PATH)
-
 - task: FortifySCA@7
   inputs:
-    licenseFile: 'C:\fortify.license'
     applicationType: 'other'
     buildAnalyzerParams: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate -f'
-    fortifyBuildId: 'ahmet33'
+    fortifyBuildId: 'ytest'
+    runFortifyRulepackUpdate: true
+    scaVerbose: true
+    scaDebug: true
     fortifyScanType: 'LocalScan'
     runFortifyUpload: true
     fortifyServerName: 'fortifyssc'
-    fortifyApplicationName: 'TDMProjeleri'
-    fortifyApplicationVersion: '1'
+    fortifyApplicationName: 'testapp'
+    fortifyApplicationVersion: '2'
